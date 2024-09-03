@@ -508,7 +508,8 @@ public class AsymmetricBindingBuilder extends BindingBuilder {
                     if(this.encrKey == null) {
                         this.setupEncryptedKey(rmd, encrToken);
                     }
-                    
+
+                    dkEncr.setTokenIdentifier(this.encryptedKeyId);
                     dkEncr.setCustomValueType(WSConstants.SOAPMESSAGE_NS11 + "#"
                             + WSConstants.ENC_KEY_VALUE_TYPE);
                     dkEncr.setSymmetricEncAlgorithm(algorithmSuite.getEncryption());
